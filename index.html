@@ -25,22 +25,17 @@
       width: 100%;
       max-width: 700px;
     }
-    h1, h2 {
+    h1 {
       text-align: center;
       color: #b30000;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }
     label {
       display: block;
       margin-top: 20px;
       font-weight: 600;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="number"],
-    select,
-    textarea {
+    input, select, textarea {
       width: 100%;
       padding: 12px;
       margin-top: 5px;
@@ -66,50 +61,31 @@
     button:hover {
       background: #800000;
     }
-    hr {
-      margin: 40px 0;
-      border: 0;
-      height: 1px;
-      background: #ddd;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Valutazione Immobiliare</h1>
+    <h1>Richiesta Valutazione Immobiliare</h1>
     <form action="https://formspree.io/f/mdkeppag" method="POST">
-      <label>Zona / Indirizzo</label><input type="text" name="indirizzo" required>
-      <label>Metratura (mq)</label><input type="number" name="mq" required>
-      <label>Piano</label><input type="text" name="piano">
+      <label>Nome e Cognome</label><input type="text" name="nome" required>
+      <label>Email</label><input type="email" name="email" required>
+      <label>Telefono</label><input type="tel" name="telefono" required>
+      <label>Zona / Indirizzo Immobile</label><input type="text" name="indirizzo" required>
+      <label>Superficie (mq)</label><input type="number" name="mq" required>
+      <label>Piano</label><input type="text" name="piano" required>
       <label>Ascensore</label>
-      <select name="ascensore"><option>Sì</option><option>No</option></select>
+      <select name="ascensore">
+        <option>Sì</option><option>No</option>
+      </select>
       <label>Stato immobile</label>
       <select name="stato">
-        <option>Nuovo</option>
-        <option>Ristrutturato</option>
-        <option>Da ristrutturare</option>
+        <option>Nuovo</option><option>Ristrutturato</option><option>Da ristrutturare</option>
       </select>
       <label>Anno di costruzione</label><input type="text" name="anno">
       <label>Tipologia</label><input type="text" name="tipologia">
       <label>Posto auto / box</label><input type="text" name="posto_auto">
       <label>Terrazzo / Giardino</label><input type="text" name="esterni">
-      <label>Note aggiuntive</label><textarea name="note" rows="3"></textarea>
-      <hr>
-
-      <h2>Candidatura Immobile - Valore InCasa</h2>
-      <label>Nome e Cognome Proprietario</label><input type="text" name="nome" required>
-      <label>Email</label><input type="email" name="email" required>
-      <label>Telefono</label><input type="tel" name="telefono">
-      <label>Indirizzo Immobile</label><input type="text" name="indirizzo_immobile">
-      <label>Descrizione immobile</label><textarea name="descrizione" rows="3"></textarea>
-      <label>Motivazione della vendita</label><input type="text" name="motivazione">
-      <label>Tempistiche</label>
-      <select name="tempistiche">
-        <option>Immediate</option>
-        <option>Entro 3 mesi</option>
-        <option>Solo valutazione</option>
-      </select>
-      <label><input type="checkbox" name="autorizzazione" required> Autorizzo GestImm Evo 81 a contattarmi</label>
+      <label>Note aggiuntive</label><textarea name="note" rows="4"></textarea>
 
       <button type="submit">Invia Richiesta</button>
     </form>
